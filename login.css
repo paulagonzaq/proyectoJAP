@@ -3,7 +3,7 @@ body {
     padding: 0;
     background-color: #17a2b8;
     height: 100vh;
-    background-image: url("../img/login.png");
+    background-image: url("./img/login.png");
     background-repeat: repeat;
     background-size: 25%;
   }
