@@ -8,11 +8,18 @@ const input = document.getElementsByTagName("button")[0]
 input.addEventListener("click", () => {
     let mail = document.getElementById("mail").value
     let password = document.getElementById("password").value
+    let usuario = {};
 
     if (mail && password){
-        console.log(window.location.href = "./home.html")
+
+        window.location.href = "./home.html"
+
+        usuario.nombre = mail;
+        usuario.estado = "Conectado";
+        sessionStorage.setItem('usuario',JSON.stringify(usuario));
+        
     } else {
-        document.getElementById("warning").style.display = "block" //tendría que aparecer cartel en rojo
+        document.getElementById("warning").style.display = "block" 
     }
 })
 });

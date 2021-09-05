@@ -44,4 +44,15 @@ var getJSONData = function(url){
 //que el documento se encuentra cargado, es decir, se encuentran todos los
 //elementos HTML presentes.
 document.addEventListener("DOMContentLoaded", function(e){
+
+  let usuario = JSON.parse(sessionStorage.getItem("usuario"));
+
+  if(usuario && usuario.estado === "Conectado"){
+    console.log("Estás conectado")        
+    document.getElementById("nombre").innerText = usuario.nombre;
+  }
+  else{   
+    console.log("No hay un usuario conectado")
+    
+  }
 });
