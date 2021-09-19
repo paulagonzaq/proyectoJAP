@@ -29,14 +29,86 @@
       </div>
     </div>
   </nav>
-  <div class="container p-5">
-    <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-      <h4 class="alert-heading">¡A trabajar! :)</h4>
-      <p>Esta sección corresponde a: Entrega 3 (Fecha de entrega: 19/09/2021) y Entrega 4 (Fecha de entrega: 03/10/2021).</p>
-      <hr>
-      <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
+  
+  <main role="main">
+    <div class="container mt-5">
+      <div class="text-center p-4">
+        <h2>Descripción del producto</h2>
+        <p class="lead">Encontrarás aquí toda la información del producto seleccionado.</p>
+      </div>
+
+      <table >
+        <tr>
+        <td>
+          <img src="../img/prod1.jpg" width="500">
+        </td> 
+        <td style="width: 2%;">
+
+        </td>
+        <td>
+        <h3 id="productName"></h3>
+      <hr class="my-3">
+      <dl>
+        <dt>Descripción</dt>
+        <dd>
+          <p id="productDescription"></p>
+        </dd>
+
+        <dt>Precio</dt>
+        <dd>
+          <span id="productCurrency"></span> <span id="productCost"></span>
+        </dd>
+
+        <dt>Categoría</dt>
+        <dd>
+          <p id="productCategory"></p>
+        </dd>
+
+        <dt>Cantidad de productos vendidos</dt>
+        <dd>
+          <p id="productSoldCount"></p>
+        </dd>
+      </td>
+    </tr>
+      </table>
+
+        <dt>Imágenes ilustrativas</dt>
+        <dd>
+          <div class="row text-center text-lg-left pt-2" id="productImagesGallery">
+          </div>
+        </dd>
+
+        
+
+        <h2>Comentarios</h2> <br>
+<div style="width: 74%;">
+        <span> Puntuar:</span> 
+        <select id="ingresoUser">
+          <option value="1" selected>1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+        <span id="puntuar"></span>
+        <br> <br>
+
+        <textarea name="newcomment" id="newcomment" style="min-width: 100%; resize: none;" rows="3"  placeholder="Agregar un comentario..."></textarea> <br>
+        <p id="warning1" style="display: none">¡Su comentario se ha enviado satisfactoriamente!</p>
+        <p id="warning2" style="display: none">Campo vacío, no se puede enviar</p>
+        <button style="float: right;" type="submit" class="btn btn-dark" id="commentbutton" value="Clear">Enviar</button>
+      </div>
+        <br><br>
+        <dd>
+          <p id="comment-list-container"></p>
+        </dd>
+        
+      </dl>
+      <a type="button" class="btn btn-light btn-lg btn-block" href="products.html">Ver productos</a>
     </div>
-  </div>
+  </main>
+
+
   <footer class="text-muted">
     <div class="container">
       <p class="float-right">
