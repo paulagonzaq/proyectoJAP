@@ -32,8 +32,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
       product = result.data;
 
       let productNameHTML = document.getElementById("productName");
-      let productDescriptionHTML =
-        document.getElementById("productDescription");
+      let productDescriptionHTML = document.getElementById("productDescription");
       let productCostHTML = document.getElementById("productCost");
       let productCurrencyHTML = document.getElementById("productCurrency");
       let productSoldCountHTML = document.getElementById("productSoldCount");
