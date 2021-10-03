@@ -47,7 +47,10 @@ document.addEventListener("DOMContentLoaded", function (e) {
 
       showImagesGallery(product.images);
     }
+
   });
+  
+
   let user = "";
   let score = "";
   let description = "";

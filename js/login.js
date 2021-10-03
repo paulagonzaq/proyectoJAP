@@ -12,11 +12,11 @@ input.addEventListener("click", () => {
 
     if (mail && password){
 
-        window.location.href = "./home.html"
-
         usuario.nombre = mail;
         usuario.estado = "Conectado";
         sessionStorage.setItem('usuario',JSON.stringify(usuario));
+
+        window.location.href = "./home.html"
         
     } else {
         document.getElementById("warning").style.display = "block" 

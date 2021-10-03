@@ -53,6 +53,5 @@ document.addEventListener("DOMContentLoaded", function(e){
   }
   else{   
     console.log("No hay un usuario conectado")
-    
   }
 });
