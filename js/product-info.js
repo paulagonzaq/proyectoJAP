@@ -1,5 +1,6 @@
 let usuario = JSON.parse(sessionStorage.getItem("usuario"));
 
+let productos = [];
 var product = {};
 
 function showImagesGallery(array) {
@@ -23,6 +24,26 @@ function showImagesGallery(array) {
       htmlContentToAppend;
   }
 }
+
+function relatedProducts(array) {
+    productosR = "";
+    product.relatedProducts.forEach((relacionado)=>{
+      productosR += 
+      `<div class="col-md-4">
+      <a href="products.html" class="card mb-4 shadow-sm custom-card">
+        <img class="bd-placeholder-img card-img-top"  src="` + array[relacionado].imgSrc + `">
+        <h3 class="m-3">` + array[relacionado].name + `</h3>
+        <div class="card-body">
+          <p class="card-text">` + array[relacionado].description + `</p>
+        </div>
+      </a>
+    </div>`
+})
+document.getElementById("productosRelacionados").innerHTML = productosR
+ }
+
+
+
 //Función que se ejecuta una vez que se haya lanzado el evento de
 //que el documento se encuentra cargado, es decir, se encuentran todos los
 //elementos HTML presentes.
@@ -49,7 +70,16 @@ document.addEventListener("DOMContentLoaded", function (e) {
     }
 
   });
-  
+
+  getJSONData(PRODUCTS_URL).then(function (result) {
+    if (result.status === "ok") {
+      productos = result.data;
+
+      relatedProducts(productos)
+ }
+
+})
+
 
   let user = "";
   let score = "";

@@ -53,5 +53,8 @@ document.addEventListener("DOMContentLoaded", function(e){
   }
   else{   
     console.log("No hay un usuario conectado")
+    if (location.pathname != "/index.html"){
+    location.href = "index.html"
+    }
   }
-});
+  });
