@@ -54,14 +54,100 @@
       </div>     
       </div>
   </nav>
-  <div class="container p-5">
-    <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-      <h4 class="alert-heading">¡A trabajar! :)</h4>
-      <p>Esta sección corresponde a: Entrega 5 (Fecha de entrega: 17/10/2021) y Entrega 7 (Fecha de entrega: 14/11/2021).</p>
-      <hr>
-      <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
+ 
+  <main role="main">
+    <div class="container mt-5">
+      <div class="text-center p-4">
+        <h2>Carrito de compras</h2>
+      </div>
+      <p class="lead">Artículos seleccionados</p>
+
+      <table class="table">
+        <tr>
+          <th></th>
+          <th>Nombre</th>
+          <th>Costo</th>
+          <th>Cantidad</th>
+          <th>Subtotal</th>
+        </tr>
+        <tr>
+          <td id="cartProductSrc"></td>
+          <td><span id="cartProductName"></span></td>
+          <td><span id="cartProductCurrency"></span>&nbsp;<span id="cartProductUnitCost"></span></td>
+          <td><input type="number" min="1" id="cartProductCount" width="5" class="text-center"></span></input></td>
+          <td>UYU <span id="subtotal"></span></td>
+        </tr>
+      </table>
+
+      <p class="lead">Tipo de envío</p>
+      <div class="d-block my-3">
+        <div class="custom-control custom-radio">
+          <input id="enviopremium" type="radio" name="envio" class="custom-control-input" checked="" required="">
+          <label class="custom-control-label" for="enviopremium">Premium 2 a 5 días (15%)</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input id="envioexpress" type="radio" name="envio" class="custom-control-input" required="">
+          <label class="custom-control-label" for="envioexpress">Express 5 a 8 días (7%)</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input id="enviostandard" type="radio" name="envio" class="custom-control-input" required="">
+          <label class="custom-control-label" for="enviostandard">Standard 12 a 15 días (5%)</label>
+        </div>
+        <br>
+        <p class="lead">Dirección de envío</p> <br>
+        <div class="form-group">
+          <input type="text" 
+          required=""
+          style="width:300px;"
+                 class="form-control"  
+                 placeholder="Calle">
+          <br>
+          <input type="number" 
+          required=""
+          style="width:120px;"
+          min="1"
+                 class="form-control" 
+                 placeholder="Número">
+          <br>
+          <input type="street" 
+          required=""
+          style="width:300px;"
+                 class="form-control" 
+                 placeholder="Esquina">
+          
+        </div>
+        
+        <hr class="mb-4">
+        <h4 class="mb-3">Resumen de compra</h4>
+        <ul class="list-group mb-3">
+          <li class="list-group-item d-flex justify-content-between lh-condensed">
+            <div>
+              <h6 class="my-0">Subtotal ($)</h6>
+              <small class="text-muted">Costo de los productos</small>
+            </div>
+            <span class="text-muted" id="subtotal1">-</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between lh-condensed">
+            <div>
+              <h6 class="my-0">Costo de envío ($)</h6>
+              <small class="text-muted">Según el tipo de envío</small>
+            </div>
+            <span class="text-muted" id="envio">-</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between">
+            <span>Total ($)</span>
+            <strong id="total">-</strong>
+          </li>
+        </ul>
+      <hr class="mb-4">
+      <button class="btn btn-primary btn-lg" type="submit">Comprar</button>
+
+      </div> 
     </div>
   </div>
+
+
+
   <div id="spinner-wrapper">
     <div class="lds-ring">
       <div></div>

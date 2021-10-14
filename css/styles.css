@@ -144,3 +144,7 @@ a.custom-card:hover {
   color: white;
   size: 1.5rem;
 }
+
+#cartProductCount {
+  width: 60px;
+}
