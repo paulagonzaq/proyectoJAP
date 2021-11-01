@@ -1,4 +1,4 @@
-let usuario = JSON.parse(sessionStorage.getItem("usuario"));
+let usuario = JSON.parse(localStorage.getItem("usuario"));
 
 let productos = [];
 var product = {};

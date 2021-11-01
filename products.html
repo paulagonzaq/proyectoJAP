@@ -27,7 +27,7 @@
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
             <a class="dropdown-item" href="cart.html">Ver mi carrito</a>
             <a class="dropdown-item" href="my-profile.html">Mi perfil</a>
-            <a class="dropdown-item" onclick="sessionStorage.clear();" href="index.html">Cerrar sesión</a>
+            <a class="dropdown-item" onclick="localStorage.clear();" href="index.html">Cerrar sesión</a>
           </div>
         </div>   
       </div>
@@ -56,6 +56,13 @@
               </div>
           </div>
       </div>
+      <hr>
+           
+      <div class="col btn-group">
+        <input type="search" id="buscar" placeholder="Ingrese su búsqueda aquí..."><button class="btn btn-dark" onclick="buscar()"> <i class="fas fa-search"></i> </button> 
+      </div>
+      <br>
+      <br>
       <div class="row justify-content-end">
         <div class="col-md-6"></div>
           <div class="col-md-6 col-sm-12 mb-1 container">
@@ -64,7 +71,7 @@
                 <p class="font-weight-normal text-right my-2">Precio</p>
               </div>
               <div class="col">
-                <input class="form-control" type="number" placeholder="min." id="rangeFilterCountMin">
+                <input class="form-control" type="number"  placeholder="min." id="rangeFilterCountMin">
               </div>
               <div class="col">
                 <input class="form-control" type="number" placeholder="máx." id="rangeFilterCountMax">
@@ -78,14 +85,17 @@
             </div>
           </div>
       </div>
+     
 
 
 
-          <div class="row">
-              <div class="list-group" id="product-list-container">
+          <div class="album py-5 bg-light">
+          <div class="container">
+              <div class="row" id="product-container">
               </div>
           </div>
       </div>
+    </div>
   </main>
 
     <div id="spinner-wrapper"><div class="lds-ring"><div></div><div></div><div></div><div></div></div></div>

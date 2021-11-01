@@ -14,7 +14,7 @@ input.addEventListener("click", () => {
 
         usuario.nombre = mail;
         usuario.estado = "Conectado";
-        sessionStorage.setItem('usuario',JSON.stringify(usuario));
+        localStorage.setItem('usuario',JSON.stringify(usuario));
 
         window.location.href = "./home.html"
         
